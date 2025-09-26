@@ -2,17 +2,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX 12   // максимум элементов
+#define MAX 12  
 
 typedef struct {
-    int k;       // ключ
-    char d[20];  // данные
+    int k;       
+    char d[20];  
 } T;
 
-T t[MAX];  // таблица
-int n = 0; // количество элементов
+T t[MAX];  
+int n = 0; 
 
-// Загрузка таблицы из файла
+
 void ld(char* fn) {
     FILE* f = fopen(fn, "r");
     if (!f) { printf("Fail\n"); exit(1); }
@@ -20,14 +20,13 @@ void ld(char* fn) {
     fclose(f);
 }
 
-// Печать таблицы
+
 void pt() {
     for (int i = 0; i < n; i++)
         printf("Key: %d | Data: %s\n", t[i].k, t[i].d);
     printf("\n");
 }
 
-// Сортировка линейным выводом с обменом
 void sx() {
     for (int i = 0; i < n - 1; i++)
         for (int j = i + 1; j < n; j++)
@@ -38,7 +37,7 @@ void sx() {
             }
 }
 
-// Двоичный поиск по ключу
+
 int bs(int x) {
     int l = 0, r = n - 1;
     while (l <= r) {
