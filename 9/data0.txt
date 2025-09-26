@@ -1,0 +1,8 @@
+15 Alex
+12 John
+19 Peter
+7 Mark
+11 Kate
+14 Emma
+18 Tom
+10 Mia
